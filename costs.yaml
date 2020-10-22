@@ -1,0 +1,32 @@
+  NAME                                 MONTHLY QTY  UNIT        PRICE   HOURLY COST  MONTHLY COST
+
+  aws_dynamodb_table.someTable666
+  ├─ Continuous backup storage (PITR)            0  GB-months   0.2200       0.0000        0.0000
+  ├─ Data storage                                5  GB-months   0.2830       0.0019        1.4150
+  ├─ On-demand backup storage                    0  GB-months   0.1100       0.0000        0.0000
+  ├─ Read capacity unit (RCU)                14600  RCU-hours   0.0001       0.0029        2.1462
+  ├─ Restore data size                           0  GB          0.1700       0.0000        0.0000
+  ├─ Streams read request unit (sRRU)            0  sRRUs        2e-07       0.0000        0.0000
+  └─ Write capacity unit (WCU)               14600  WCU-hours   0.0007       0.0147       10.7310
+  Total                                                                      0.0196       14.2922
+
+  aws_lambda_function.lambda_128_120
+  ├─ Duration                                25000  GB-seconds   2e-05       0.0006        0.4167
+  └─ Requests                              1000000  requests     2e-07       0.0003        0.2000
+  Total                                                                      0.0008        0.6167
+
+  aws_lambda_function.lambda_256_350
+  ├─ Duration                               100000  GB-seconds   2e-05       0.0023        1.6667
+  └─ Requests                              1000000  requests     2e-07       0.0003        0.2000
+  Total                                                                      0.0026        1.8667
+
+  aws_lambda_function.lambda_384_350
+  ├─ Duration                               150000  GB-seconds   2e-05       0.0034        2.5000
+  └─ Requests                              1000000  requests     2e-07       0.0003        0.2000
+  Total                                                                      0.0037        2.7000
+
+  aws_sqs_queue.standard
+  └─ Requests                             10000000  requests     4e-07       0.0055        4.0000
+  Total                                                                      0.0055        4.0000
+
+  OVERALL TOTAL                                                              0.0322       23.475
