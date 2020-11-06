@@ -1,5 +1,5 @@
-resource "aws_lambda_function" "proactive-s3" {
-  function_name    = "proactive-s3"
+resource "aws_lambda_function" "error-handler" {
+  function_name    = "error-handler"
   filename         = data.archive_file.lambda_zip_inline.output_path
   source_code_hash = data.archive_file.lambda_zip_inline.output_base64sha256
   runtime          = "nodejs10.x"
@@ -9,8 +9,8 @@ resource "aws_lambda_function" "proactive-s3" {
   timeout          = 120
 
 }
-data "infracost_aws_lambda_function" "lambda2" {
-  resources = [aws_lambda_function.proactive-s3.id]
+data "infracost_aws_lambda_function" "lambda3" {
+  resources = [aws_lambda_function.error-handler.id]
 
   monthly_requests {
     value = 1000000
